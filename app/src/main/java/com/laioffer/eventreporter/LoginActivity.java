@@ -3,17 +3,21 @@ package com.laioffer.eventreporter;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.laioffer.eventreporter.EventAc.EventActivity;
+import com.laioffer.eventreporter.Utils.Utils;
+import com.laioffer.eventreporter.artifacts.User;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -35,6 +39,9 @@ public class LoginActivity extends AppCompatActivity {
         mPasswordEditText = (EditText) findViewById(R.id.editTextPassword);
         mSubmitButton = (Button) findViewById(R.id.submit);
         mRegisterButton = (Button) findViewById(R.id.register);
+        AdView mAdView =(AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         // Implements button registration click event
         mRegisterButton.setOnClickListener(new View.OnClickListener() {

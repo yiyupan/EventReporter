@@ -1,5 +1,7 @@
 package com.laioffer.eventreporter;
 
+import com.laioffer.eventreporter.artifacts.Event;
+
 import java.util.ArrayList;
 import java.util.List;
 

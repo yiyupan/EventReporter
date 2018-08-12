@@ -25,6 +25,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.laioffer.eventreporter.Utils.LocationTracker;
+import com.laioffer.eventreporter.Utils.Utils;
+import com.laioffer.eventreporter.artifacts.Event;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -162,6 +165,8 @@ public class EventReportActivity extends AppCompatActivity {
         event.setAddress(location);
         event.setDescription(description);
         event.setTime(System.currentTimeMillis());
+        event.setLatitude(mLocationTracker.getLatitude());
+        event.setLongitude(mLocationTracker.getLongitude());
         event.setUsername(Utils.username);
         String key = database.child("events").push().getKey();
         event.setId(key);

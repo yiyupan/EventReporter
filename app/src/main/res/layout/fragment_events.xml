@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.laioffer.eventreporter.EventsFragment">
+    tools:context="com.laioffer.eventreporter.EventAc.EventsFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,6 +21,7 @@
                 android:paddingLeft="20dp"
                 android:textSize="20sp"
                 android:textColor="#FFFFFF"
+                android:id="@+id/Events"
                 android:text="Events"
                 >
             </TextView>

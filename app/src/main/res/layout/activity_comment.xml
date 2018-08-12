@@ -4,7 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.laioffer.eventreporter.CommentActivity">
+    tools:context="com.laioffer.eventreporter.CommentAc.CommentActivity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/comment_recycler_view"
